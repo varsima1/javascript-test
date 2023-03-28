@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/pic-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../src/app.js" type="module"></script>
+
+    <title>SLIDESHOW - app</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
+        <div class="container">
+          <span id="home-page-link" class="navbar-brand cursor">Slideshow</span>
+
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+
+          <div
+            class="navbar-collapse collapse d-flex-md justify-content-between"
+            id="navbarColor01"
+          >
+            <div>
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <span
+                    id="about-page-link"
+                    class="nav-link cursor"
+                    aria-current="page"
+                    >About</span
+                  >
+                </li>
+                <li class="nav-item">
+                  <span
+                    id="create-pic-link"
+                    class="nav-link cursor d-none"
+                    aria-current="page"
+                    >Add Pic</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <span
+                    id="signup-page-link"
+                    class="nav-link cursor"
+                    aria-current="page"
+                    >Signup</span
+                  >
+                </li>
+                <li class="nav-item">
+                  <span
+                    id="edit-profile-page-link"
+                    class="nav-link cursor d-none"
+                    aria-current="page"
+                    >edit profile</span
+                  >
+                </li>
+                <li class="nav-item">
+                  <span
+                    id="login-page-link"
+                    class="nav-link cursor"
+                    aria-current="page"
+                    >Login</span
+                  >
+                </li>
+                <li class="nav-item">
+                  <span
+                    id="logout-page-link"
+                    class="nav-link cursor d-none"
+                    aria-current="page"
+                    >logout</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- home page -->
+      <div id="home-page" class="d-block">
+        <div class="container">
+          <!-- home page titles -->
+          <div class="center">
+            <div class="col-12 col-md-10 col-xl-8">
+              <h1 class="display-4 text-center">HOME PAGE</h1>
+              <h2 class="fs-5">Here you can look at your pictures...</h2>
+              <hr />
+            </div>
+          </div>
+
+          <!-- the slideshow -->
+          <div id="slider-container">
+            <div class="center">
+              <div class="col-12 col-md-10 col-xl-8">
+                <figure>
+                  <img
+                    id="slider-image"
+                    src=""
+                    alt="..."
+                    class="slide-show-img bg-dark p-2"
+                  />
+                  <figcaption>
+                    Photographed by:
+                    <span id="slider-credits">...</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- slider controllers -->
+            <div class="center mb-2">
+              <div>
+                <div id="slider-prev-btn" class="btn btn-outline-dark mx-2">
+                  Prev
+                </div>
+                <div id="slider-next-btn" class="btn btn-outline-dark mx-2">
+                  Next
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- about page -->
+      <div id="about-page" class="d-none">
+        <div class="container">
+          <div class="center">
+            <div class="col-12 col-md-10 col-xl-8">
+              <h1 class="display-4 text-center">ABOUT PAGE</h1>
+              <div class="card mb-3">
+                <img
+                  src="assets/images/homepage.png"
+                  class="card-img-top"
+                  alt="home page"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Homepage Description</h5>
+                  <p class="card-text">
+                    This is the home screen through which you can enter the
+                    application through which you can see a changing photo
+                    gallery and the names of the creators of the photos.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Navigation Menu</h5>
+                  <p class="card-text">
+                    This is a navigation menu through which you can register for
+                    the application, connect to the application
+                    and read about it.
+                  </p>
+                </div>
+                <img
+                  src="assets/images/navbar.png"
+                  class="card-img-bottom"
+                  alt="navbar"
+                />
+              </div>
+              <div class="card mb-3">
+                <img
+                  src="assets/images/register.png"
+                  class="card-img-top"
+                  alt="register"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sign-Up Menu</h5>
+                  <p class="card-text">
+                    The Sign-Up Menu is where the user fills in details in the
+                    appropriate fields to register for using the application.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Login Menu</h5>
+                  <p class="card-text">
+                    The login menu is the menu through which the user connects
+                    to the application. After logging in, the user is
+                    transferred to the home page and in the navigation menu
+                    there will be an option to disconnect from the application
+                    instead of the option to connect to it.
+                  </p>
+                </div>
+                <img
+                  src="assets/images/login-page.png"
+                  class="card-img-bottom"
+                  alt="login"
+                />
+                <img
+                  src="assets/images/navbar2.png"
+                  class="card-img-bottom"
+                  alt="navbar"
+                />
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Add Picture Menu</h5>
+                  <p class="card-text">
+                    In the Add Picture Menu, the user may add a picture that he
+                    owns, specify who created the picture , describe it with a
+                    title and description and give it a price tag.
+                  </p>
+                </div>
+                <img
+                  src="assets/images/addpic.png"
+                  class="card-img-bottom"
+                  alt="add pictures"
+                />
+              </div>
+
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- create pic page -->
+      <div id="create-pic-page" class="d-none">
+        <div class="container">
+          <div class="center" style="height: 87vh">
+            <form
+              class="form p-2 col-12 col-md-6 col-xl-4 border rounded"
+              style="min-width: 280px"
+            >
+              <h1 class="text-center fs-5">CREATE NEW PICTURE</h1>
+              <div>
+                <label for="create-pic-url">Source</label>
+                <input
+                  id="create-pic-url"
+                  type="text"
+                  class="form-control mb-2"
+                  name="url"
+                  autocomplete="off"
+                />
+                <span id="create-pic-url-error" class="text-danger"></span>
+              </div>
+              <div>
+                <label for="create-pic-alt">Description</label>
+                <input
+                  id="create-pic-alt"
+                  type="text"
+                  class="form-control mb-2"
+                  name="alt"
+                  autocomplete="off"
+                />
+                <span id="create-pic-alt-error" class="text-danger"></span>
+              </div>
+              <div>
+                <label for="create-pic-credits">Credits</label>
+                <input
+                  id="create-pic-credits"
+                  type="text"
+                  class="form-control mb-2"
+                  name="credits"
+                  autocomplete="off"
+                />
+                <span id="create-pic-credits-error" class="text-danger"></span>
+              </div>
+              <div>
+                <label for="create-pic-price">Price</label>
+                <input
+                  id="create-pic-price"
+                  type="number"
+                  class="form-control mb-2"
+                  name="price"
+                  autocomplete="off"
+                />
+                <span id="create-pic-price-error" class="text-danger"></span>
+              </div>
+              <input
+                id="create-pic-cancel-btn"
+                type="button"
+                value="cancel"
+                class="btn btn-secondary col-12 mb-2"
+              />
+              <input
+                id="create-pic-submit-btn"
+                type="button"
+                value="submit"
+                class="btn btn-primary col-12 mb-2"
+                disabled
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="signup-page" class="d-none">
+        <div class="container">
+          <div class="center" style="height: 87vh">
+            <form class="form p-4 col-12 col-md-10 col-xl-8 rounded border">
+              <div class="row">
+                <h3 class="text-center">REGISTAR</h3>
+
+                <h6>name:</h6>
+                <div class="col">
+                  <label for="first-name-rgister">first name</label>
+                  <input
+                    id="first-name-rgister"
+                    type="text"
+                    class="form-control mb-2"
+                    name="first"
+                  />
+                  <span
+                    class="text-danger"
+                    id="first-name-rgister-error"
+                  ></span>
+                </div>
+                <div class="col">
+                  <label for="last-name-rgister">last name</label>
+                  <input
+                    id="last-name-rgister"
+                    type="text"
+                    class="form-control mb-2"
+                    name="last"
+                  />
+                  <span id="last-name-rgister-error" class="text-danger"></span>
+                </div>
+              </div>
+              <div class="row">
+                <h6>address:</h6>
+                <div class="col">
+                  <label for="address-register-cuntry">country</label>
+                  <input
+                    id="address-register-cuntry"
+                    type="text"
+                    class="form-control mb-2"
+                    name="country"
+                  />
+                  <span
+                    id="address-register-cuntry-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+                <div class="col">
+                  <label for="address-register-state">state</label>
+                  <input
+                    id="address-register-state"
+                    type="text"
+                    class="form-control mb-2"
+                    name="state"
+                  />
+                  <span
+                    id="address-register-state-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="address-register-city">city</label>
+                  <input
+                    id="address-register-city"
+                    type="text"
+                    class="form-control mb-2"
+                    name="city"
+                  />
+                  <span
+                    id="address-register-city-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+                <div class="col">
+                  <label for="address-register-street">street</label>
+                  <input
+                    id="address-register-street"
+                    type="text"
+                    class="form-control mb-2"
+                    name="street"
+                  />
+                  <span
+                    id="address-register-street-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+                <div class="col">
+                  <label for="address-register-houseNumber">houseNumber</label>
+                  <input
+                    id="address-register-houseNumber"
+                    type="number"
+                    class="form-control mb-2"
+                    name="houseNumber"
+                  />
+                  <span
+                    id="address-register-houseNumber-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+                <div class="col">
+                  <label for="address-register-zip">zip</label>
+                  <input
+                    id="address-register-zip"
+                    type="number"
+                    class="form-control mb-2"
+                    name="zip"
+                  />
+                  <span
+                    id="address-register-zip-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="address-register-phone">phone number</label>
+                  <input
+                    id="address-register-phone"
+                    type="number"
+                    class="form-control mb-2"
+                    name="phone"
+                  />
+                  <span
+                    id="address-register-phone-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+                <div class="col">
+                  <label for="address-register-email">email</label>
+                  <input
+                    id="address-register-email"
+                    type="e"
+                    class="form-control mb-2"
+                    name="email"
+                  />
+                  <span
+                    id="address-register-email-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+                <div class="col">
+                  <label for="address-register-password">password</label>
+                  <input
+                    id="address-register-password"
+                    type="password"
+                    class="form-control mb-2"
+                    name="password"
+                  />
+                  <span
+                    id="address-register-password-error"
+                    class="text-danger"
+                  ></span>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="business"
+                    id="invalidCheck"
+                    name="isBusiness"
+                    required
+                  />
+                  <label class="form-check-label"> Business client </label>
+                </div>
+              </div>
+              <div>
+                <input
+                  id="register-cencel-btn"
+                  type="button"
+                  value="cencel"
+                  class="btn btn-secondary col-12 mb-2"
+                />
+
+                <input
+                  id="registar-submit-btn"
+                  type="button"
+                  value="sign up"
+                  class="btn btn-primary col-12 mb-2"
+                  disabled
+                />
+              </div>
+            </form>
+          </div>
+          <p>signup content</p>
+        </div>
+      </div>
+
+      <!-- login page -->
+      <div id="login-page" class="d-none">
+        <div class="container">
+          <div class="center" style="min-height: 87vh">
+            <form
+              class="form col-12 col-md-10 col-xl-8 p-2 rounded border"
+              style="max-width: 450px"
+            >
+              <h1 class="text-center fs-5">LOGIN</h1>
+
+              <div>
+                <label for="login-email-field">email</label>
+                <input
+                  class="form-control mb-2"
+                  type="email"
+                  name="email"
+                  id="login-email-field"
+                  autocomplete="off"
+                />
+                <span id="login-email-error" class="text-danger"></span>
+              </div>
+
+              <div>
+                <label for="login-password-field">password</label>
+                <input
+                  class="form-control mb-2"
+                  type="password"
+                  name="password"
+                  id="login-password-field"
+                  autocomplete="off"
+                />
+                <span id="login-password-error" class="text-danger mb-1"></span>
+              </div>
+
+              <input
+                id="login-submit-btn"
+                type="button"
+                value="Submit"
+                class="btn btn-primary col-12 mb-2"
+                disabled
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- error 404 page -->
+      <div id="error-404-page" class="d-none">
+        <div class="container">
+          <div class="center">
+            <div class="col-12 col-md-10 col-xl-8">
+              <h1 class="display-4">ERROR 404 PAGE</h1>
+              <h2 class="fs-5">
+                <span id="return-to-home-page-link" class="navbar-brand cursor"
+                  >return to home page</span
+                >
+              </h2>
+              <hr />
+            </div>
+          </div>
+
+          <p id="return-to-home-page-link" class="cursor">
+            Click here to return to the hom page...
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="border-top pt-3 bg-dark center">
+      <p class="text-light">Created by David Yakin &copy;</p>
+    </footer>
+  </body>
+</html>
